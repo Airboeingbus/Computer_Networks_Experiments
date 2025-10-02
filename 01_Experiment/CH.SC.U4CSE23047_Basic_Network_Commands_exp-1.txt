@@ -1,0 +1,92 @@
+Microsoft Windows [Version 10.0.26100.6584]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\System32>netstat
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State
+  TCP    127.0.0.1:49670        Shaktivell:49671       ESTABLISHED
+  TCP    127.0.0.1:49671        Shaktivell:49670       ESTABLISHED
+  TCP    127.0.0.1:49672        Shaktivell:49673       ESTABLISHED
+  TCP    127.0.0.1:49673        Shaktivell:49672       ESTABLISHED
+^C
+C:\Windows\System32>telnet
+'telnet' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\System32>ipconfig
+
+Windows IP Configuration
+
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . : bbrouter
+   IPv4 Address. . . . . . . . . . . : 192.168.1.40
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.1.1
+
+C:\Windows\System32>ping google.com
+
+Pinging google.com [142.251.42.14] with 32 bytes of data:
+Reply from 142.251.42.14: bytes=32 time=80ms TTL=119
+Reply from 142.251.42.14: bytes=32 time=7ms TTL=119
+Reply from 142.251.42.14: bytes=32 time=49ms TTL=119
+Reply from 142.251.42.14: bytes=32 time=8ms TTL=119
+
+Ping statistics for 142.251.42.14:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 7ms, Maximum = 80ms, Average = 36ms
+
+C:\Windows\System32>tracert google.com
+
+Tracing route to google.com [142.251.42.14]
+over a maximum of 30 hops:
+
+  1    18 ms     4 ms     3 ms  Earth-2022.bbrouter [192.168.1.1]
+  2    34 ms    28 ms    10 ms  103.252.4.94.threesainfoway.net [103.252.4.94]
+  3    17 ms    16 ms     6 ms  103.252.4.93.threesainfoway.net [103.252.4.93]
+  4    19 ms     5 ms     6 ms  142.250.165.170
+  5     5 ms     8 ms     6 ms  142.251.49.177
+  6     5 ms    16 ms     5 ms  209.85.248.61
+  7    46 ms    29 ms    13 ms  bom12s19-in-f14.1e100.net [142.251.42.14]
+
+Trace complete.
+
+C:\Windows\System32>nslookup
+Default Server:  Earth-2022.bbrouter
+Address:  192.168.1.1
+
+>
+>
+>
+>
+C:\Windows\System32>pathping google.com
+
+Tracing route to google.com [142.251.42.14]
+over a maximum of 30 hops:
+  0  Shaktivell.bbrouter [192.168.1.40]
+  1  Earth-2022.bbrouter [192.168.1.1]
+  2  103.252.4.94.threesainfoway.net [103.252.4.94]
+  3  103.252.4.93.threesainfoway.net [103.252.4.93]
+  4  142.250.165.170
+  5  142.251.49.177
+  6  209.85.248.61
+  7  bom12s19-in-f14.1e100.net [142.251.42.14]
+
+Computing statistics for 175 seconds...
+^C
+C:\Windows\System32>
+C:\Windows\System32>
